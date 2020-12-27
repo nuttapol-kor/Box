@@ -1,0 +1,9 @@
+version: "3"
+services:
+  myapp:
+    build: .
+    ports:
+      - "1234:8000"
+    volumes:
+      - "./app:/app"
+    command: python manage.py runserver 0.0.0.0:8000
